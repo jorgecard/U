@@ -40,7 +40,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_0">
      <widget class="QTableWidget" name="tableWidget">
@@ -150,13 +150,13 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         <x>410</x>
         <y>30</y>
         <width>211</width>
-        <height>120</height>
+        <height>151</height>
        </rect>
       </property>
       <property name="title">
        <string>Valores iniciales sugeridos</string>
       </property>
-      <widget class="QLineEdit" name="lineEdit_13">
+      <widget class="QLineEdit" name="line_rho_01">
        <property name="geometry">
         <rect>
          <x>60</x>
@@ -166,10 +166,10 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         </rect>
        </property>
        <property name="text">
-        <string>1000</string>
+        <string>800</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="line_rho_02">
        <property name="geometry">
         <rect>
          <x>60</x>
@@ -179,10 +179,10 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         </rect>
        </property>
        <property name="text">
-        <string>1000</string>
+        <string>200</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_2">
+      <widget class="QLineEdit" name="line_h_0">
        <property name="geometry">
         <rect>
          <x>60</x>
@@ -192,7 +192,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         </rect>
        </property>
        <property name="text">
-        <string>20</string>
+        <string>1</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_4">
@@ -232,6 +232,29 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        </property>
        <property name="text">
         <string> rho_1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>41</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Método</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>110</y>
+         <width>131</width>
+         <height>22</height>
+        </rect>
        </property>
       </widget>
      </widget>
@@ -371,7 +394,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         <x>390</x>
         <y>210</y>
         <width>321</width>
-        <height>120</height>
+        <height>151</height>
        </rect>
       </property>
       <property name="title">
@@ -494,6 +517,45 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         <string/>
        </property>
       </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Error</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_fun">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>120</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgba(0, 0, 0, 140);
+background-color: rgb(255, 255, 255);
+font: 10pt &quot;Segoe UI&quot;;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="page_1">
@@ -501,9 +563,9 @@ font: 10pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>-30</x>
-        <y>70</y>
+        <y>60</y>
         <width>441</width>
-        <height>391</height>
+        <height>431</height>
        </rect>
       </property>
      </widget>
@@ -511,17 +573,17 @@ font: 10pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>70</y>
+        <y>120</y>
         <width>381</width>
-        <height>391</height>
+        <height>371</height>
        </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_c_2">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>480</y>
+        <x>20</x>
+        <y>490</y>
         <width>75</width>
         <height>24</height>
        </rect>
@@ -536,24 +598,16 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         <x>430</x>
         <y>15</y>
         <width>351</width>
-        <height>31</height>
+        <height>91</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Comparación entre los datos de Resistividad Aparentes</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_8">
-      <property name="geometry">
-       <rect>
-        <x>430</x>
-        <y>40</y>
-        <width>351</width>
-        <height>31</height>
-       </rect>
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
-       <string>Calculados vs Medidos</string>
+       <string>Comparación entre los datos de
+Resistividad Aparentes 
+Calculados vs Medidos</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_9">
@@ -564,6 +618,9 @@ font: 10pt &quot;Segoe UI&quot;;</string>
         <width>351</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>Convergencia de parámetros</string>

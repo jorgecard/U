@@ -45,15 +45,16 @@ class LIVE_PLOT_APP(QtWidgets.QMainWindow):
         
         # Establecer la página predeterminada al arrancar
         self.ui.stackedWidget.setCurrentWidget(self.ui.page_0)
-        # acceder a las paginas
-        self.ui.pushButton_g.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_1))
-        self.ui.pushButton_c_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_0))
-        self.pushButton_e.clicked.connect(self.open_dialog_box)
-        self.pushButton_c.clicked.connect(self.Two_Layer_Parameters)
         
         # Inicializar el comboBox con los métodos de optimización
         self.ui.comboBox.addItems(['Nelder-Mead', 'Powell'])
         self.ui.comboBox.setCurrentIndex(0)  # Seleccionar 'Nelder-Mead' por defecto
+        
+        # Conectar los botones
+        self.ui.pushButton_g.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_1))
+        self.ui.pushButton_c_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_0))
+        self.pushButton_e.clicked.connect(self.open_dialog_box)
+        self.pushButton_c.clicked.connect(self.Two_Layer_Parameters)
         
     def open_dialog_box(self):
         self.filename, _ = QFileDialog.getOpenFileName(self, 'Open File', dir_actual, 'All Files (*)')
